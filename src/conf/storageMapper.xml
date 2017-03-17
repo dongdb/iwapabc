@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.nantian.iwap.system.app">
+      <!--查询角色-->
+      <select id="queryStoWithPage" resultType="java.util.Map">
+     	select FID,VERSION,FNAME,FDESCRIPTION,FUSESTATUSNAME  from OA_PUB_BASECODE
+     	where FSCOPE = '资产入库类型'
+	    order by FSEQUENCE asc
+     </select>
+     
+     <delete id="deleteSto">
+        <if test="list.size>0">
+     	
+     	<![CDATA[delete from OA_PUB_BASECODE where FID in (
+     	]]>
+     	<foreach collection="list" item ="item" index ="index" separator=",">
+     	 #{item}
+     	</foreach>
+     	<![CDATA[)
+     	]]>
+     	</if>
+     </delete>
+     
+     <update id="updateSto">
+     	update OA_PUB_BASECODE 
+     	set FNAME=#{FNAME},
+     	FDESCRIPTION=#{FDESCRIPTION,jdbcType=VARCHAR},
+     	VERSION=#{VERSION,jdbcType=VARCHAR},
+     	FUSESTATUS=#{FUSESTATUS},
+     	FUSESTATUSNAME=#{FUSESTATUSNAME},
+     	FUPDATEPSNID=#{PSNID},
+     	FUPDATEPSNNAME=#{PSNNM},
+     	FUPDATETIME=#{FUPDATETIME,jdbcType=TIMESTAMP}
+     	where FID=#{FID}
+     </update>
+     
+     <select id="existSto"  resultType="java.util.Map">
+        select count(2) as cnt from OA_PUB_BASECODE where FSCOPE='资产入库类型' and FNAME =#{FNAME} 
+     </select>
+     
+     <select id="countSto"  resultType="java.util.Map">
+        select count(2)+1 as cnt from OA_PUB_BASECODE where FSCOPE='资产入库类型'
+     </select>
+     
+     <insert id="insertSto">
+        insert into OA_PUB_BASECODE
+		(FID,VERSION,FSCOPE,FNAME,FSEQUENCE,FDESCRIPTION,FUSESTATUS,FUSESTATUSNAME,
+		FCREATEOGNID,FCREATEPSNID,FCREATEPSNNAME,FCREATETIME,FUPDATETIME) values
+        (#{FID},0,'资产入库类型',#{FNAME},#{FSEQUENCE},#{FDESCRIPTION,jdbcType=VARCHAR},#{FUSESTATUS},#{FUSESTATUSNAME},
+        #{ORGID},#{PSNID},#{PSNNM},#{FCREATETIME},#{FCREATETIME})
+     </insert>
+     
+     <update id="startSto">
+     	update OA_PUB_BASECODE 
+     	set
+     	FUSESTATUS=1,
+     	FUSESTATUSNAME='启用',
+     	FUPDATEPSNID=#{PSNID},
+     	FUPDATEPSNNAME=#{PSNNM},
+     	FUPDATETIME=#{FUPDATETIME,jdbcType=TIMESTAMP}
+     	where FID =#{FID}
+     </update>
+     
+     <update id="stopSto">
+     	update OA_PUB_BASECODE 
+     	set
+     	FUSESTATUS=0,
+     	FUSESTATUSNAME='停用',
+     	FUPDATEPSNID=#{PSNID},
+     	FUPDATEPSNNAME=#{PSNNM},
+     	FUPDATETIME=#{FUPDATETIME,jdbcType=TIMESTAMP}
+     	where FID=#{FID}
+     </update>
+ 
+ </mapper>

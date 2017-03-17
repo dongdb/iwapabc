@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Transaction name="manageStorage" caption="" version="1.0" description="">
+	<actionflow id="">
+			<action id="start" type="begin" />
+			<action id="viewPage" type="view">
+				<param name="page">screen/system/storage/manageStorage.jsp</param>
+				<param name="paramType">result</param>
+			</action>
+			<action id="doBiz" type="service">
+				<param name="clazz">
+					  com.nantian.iwap.app.action.system.storage.ManageStorageAction
+				</param>
+			</action>
+			<action id="ret" type="json">
+				<param name="paramType">result</param>
+			</action>
+			<action id="end" type="end" >
+			</action>
+			
+		</actionflow>
+</Transaction>

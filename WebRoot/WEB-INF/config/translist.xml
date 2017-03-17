@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TransList>
+  <!-- 前台 -->
+  <TransInterface name="sysParam" transFile="system/sysParam.xml"/>
+  <TransInterface name="login" transFile="system/login.xml"/>
+  <TransInterface name="modifyPwd" transFile="system/modifyPwd.xml"/>
+  <TransInterface name="online" transFile="system/online.xml"/>
+  <TransInterface name="getUserMenu" transFile="system/userMenu.xml"/>
+  <TransInterface name="userMg" transFile="system/userMg.xml"/>
+  <TransInterface name="logQry" transFile="system/logQry.xml"/>
+
+  <!-- prefrcMg 偏好设置 -->
+  <TransInterface name="prefrcMg" transFile="system/prefrcMg.xml"/>
+  <!-- role -->
+  <TransInterface name="roleMg" transFile="system/role/query.xml"/>
+  <!-- department -->
+  <TransInterface name="department" transFile="system/department/query.xml"/>
+  <TransInterface name="addDepartment" transFile="system/department/add.xml"/>
+  <TransInterface name="showDepartment" transFile="system/department/show.xml"/>
+  <TransInterface name="departmentList" transFile="system/department/list.xml"/>
+  <TransInterface name="orgMg" transFile="system/department/orgMg.xml"/>
+  
+  <!-- menu -->
+  <TransInterface name="menuMg" transFile="system/menu/query.xml"/>
+  <!-- pub -->
+  <TransInterface name="deptList" transFile="pub/deptlist.xml"/>
+  <TransInterface name="menuList" transFile="pub/menulist.xml"/>
+  <TransInterface name="usertList" transFile="pub/userlist.xml"/>
+  <TransInterface name="importData" transFile="pub/importData.xml"/>
+  <TransInterface name="exportData" transFile="pub/exportData.xml"/>
+  <TransInterface name="assetDetail" transFile="pub/assetDetail.xml"/>
+  <TransInterface name="assetDetailquery" transFile="pub/assetDetailquery.xml"/>
+  <TransInterface name="assetDetailquerya" transFile="pub/assetDetailquerya.xml"/>
+  <TransInterface name="printBar" transFile="pub/printBar.xml"/>
+  <TransInterface name="chooseOrg" transFile="pub/chooseOrg.xml"/>
+  <TransInterface name="chooseClass" transFile="pub/chooseClass.xml"/>
+    
+  <!-- common -->
+  <TransInterface name="dictionary" transFile="common/dictionary.xml"/>
+  <TransInterface name="dict" transFile="common/dict.xml"/>
+  
+  <TransInterface name="homePage" transFile="system/homePage.xml"/>
+  
+  <!-- 基础设置 -->
+  <TransInterface name="assetClassify" transFile="system/base/assetClassify.xml"/>
+  <TransInterface name="repairTp" transFile="system/base/repairTp.xml"/>
+  <TransInterface name="contractTp" transFile="system/base/contractTp.xml"/>
+  <TransInterface name="projectTp" transFile="system/base/projectTp.xml"/>
+  <TransInterface name="currencyTp" transFile="system/base/currencyTp.xml"/>
+  <TransInterface name="budgetTp" transFile="system/base/budgetTp.xml"/>
+  <TransInterface name="dealTp" transFile="system/base/dealTp.xml"/>
+  <TransInterface name="storageMg" transFile="system/base/storageMg.xml"/>
+  <!-- storage 入库方式 -->
+  <TransInterface name="insertStorage" transFile="system/storage/insertStorage.xml"/>
+  <TransInterface name="checkStorage" transFile="system/storage/checkStorage.xml"/>
+  <TransInterface name="manageStorage" transFile="system/storage/manageStorage.xml"/>
+  <TransInterface name="queryStorage" transFile="system/storage/queryStorage.xml"/>
+  <TransInterface name="proStorage" transFile="system/storage/proStorage.xml"/>
+  <TransInterface name="deleteStorage" transFile="system/storage/deleteStorage.xml"/>
+  
+  <!-- assetInfo 资产信息 -->
+  <TransInterface name="assetCard" transFile="system/fixedAssets/assetCard.xml"/>
+  <TransInterface name="assetAccount" transFile="system/fixedAssets/assetAccount.xml"/>
+  <TransInterface name="assetQuery" transFile="system/fixedAssets/assetQuery.xml"/>
+  <TransInterface name="assetServiceYear" transFile="system/fixedAssets/assetServiceYear.xml"/>
+  
+  <!-- Repair 维修 -->
+  <TransInterface name="repairRequest" transFile="system/repair/repairRequest.xml"/>
+  <TransInterface name="repairList" transFile="system/repair/repairList.xml"/>
+  <TransInterface name="repairRecord" transFile="system/repair/repairRecord.xml"/>
+  <TransInterface name="repairReport" transFile="system/repair/repairReport.xml"/>
+  
+  <!-- Inventory 盘点 -->
+  <TransInterface name="inventoryTask" transFile="system/inventory/inventoryTask.xml"/>
+  <!-- <TransInterface name="inventoryResult" transFile="system/inventory/inventoryResult.xml"/>
+  <TransInterface name="inventoryResultDeal" transFile="system/inventory/inventoryResultDeal.xml"/>
+  <TransInterface name="inventoryReport" transFile="system/inventory/inventoryReport.xml"/>
+  <TransInterface name="inventorySum" transFile="system/inventory/inventorySum.xml"/> -->
+  
+  <!-- Deal 处置 -->
+  <TransInterface name="dealRequest" transFile="system/deal/dealRequest.xml"/>
+  <TransInterface name="dealQuery" transFile="system/deal/dealQuery.xml"/>
+  <!-- <TransInterface name="repairRecord" transFile="system/deal/repairRecord.xml"/>
+  <TransInterface name="repairReport" transFile="system/deal/repairReport.xml"/> -->
+
+  <!-- Contract 合同 -->
+  <TransInterface name="contractManage" transFile="system/contract/contractManage.xml"/>
+  <TransInterface name="contractRecord" transFile="system/contract/contractRecord.xml"/>
+  <TransInterface name="ContractInfoQuery" transFile="system/contract/ContractInfoQuery.xml"/>
+  
+  <!-- onProject 在建工程-->
+  <TransInterface name="onProject" transFile="system/project/onProject.xml"/>
+  <TransInterface name="onProjectQuery" transFile="system/project/onProjectQuery.xml"/>
+  
+  <!-- BillMg 发票管理-->
+  <TransInterface name="BillMg" transFile="system/bill/billMg.xml"/>
+  
+  <!-- AssetUseMg 资产使用管理-->
+  <TransInterface name="assetArrangeMg" transFile="system/assetUseMg/assetArrangeMg.xml"/>
+  
+  <!-- AssetCheckMg 资产财务管理-->
+  <TransInterface name="assetConfirm" transFile="system/assetCheckMg/assetConfirm.xml"/>
+
+  <!-- taskDialog 处理任务对话框-->
+  <TransInterface name="repairD" transFile="system/taskDialog/repairD.xml"/>
+
+
+</TransList>

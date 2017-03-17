@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Transaction name="assetCard" caption="" version="1.0" description="">
+	<actionflow id="">
+		<actions>
+			<action id="start" type="begin"/>
+			<action id="viewPage" type="view">
+				<param name="page">screen/system/fixedAssets/assetCard.jsp</param>
+			</action>
+			<!-- RoleBatisDaoAction继承com.nantian.iwap.app.action.system.BatisDaoAction -->
+			<action id="doBiz" class="com.nantian.iwap.app.action.system.AssetCardBatisDaoAction">
+				<param name="querySqlId">
+					queryAcWithPage
+				</param>
+				<param name="existSqlId">
+					existAc
+				</param>
+				<param name="updateSqlId">
+					updateAc
+				</param>
+			</action>
+			<action id="subBiz" type="subFlow">
+				<param name="txcode">exportData</param>
+			</action>
+			<action id="ret" type="json">
+				<param name="paramType">result</param>
+			</action>
+			<action id="end" type="end"/>
+		</actions>
+		<connections>
+			<connection id="connection0" from="start" to="viewPage"/>
+			<connection id="connection1" from="viewPage" to="doBiz"/>
+			<connection id="connection2" from="doBiz" to="subBiz"/>
+			<connection id="connection3" from="subBiz" to="ret"/>
+			<connection id="connection6" from="ret" to="end"/>
+		</connections>
+	</actionflow>
+</Transaction>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.nantian.iwap.system.app">
+      <!-- 查询角色 -->
+      <select id="queryAcWithPage" resultType="java.util.Map">
+     	select FID,FCODE,FNAME,FCHECKED,FSPECTYPE,FBARCODE,
+     		   FORIGINVALUE,FEXTENDSTR2,FDUTYPSNNAME,
+     		   TO_CHAR(FCREATETIME,'yyyy-mm-dd') AS FCREATETIME,
+     		   FSTATUSNAME,FDUTYDEPTNAME,FRESPONSEDEPTNAME,
+     		   FISFA,FASSETCONFIRM,FSOURCENAME,FRESPONSEPSNNAME,
+     		   FISDEPT,FREMAINVALUE
+     		   from OA_AS_CARD where 1=1
+	    <!-- 编号 -->
+	    <if test="'' != FCODE and FCODE !=null">
+            and FCODE like '%'||#{FCODE}||'%' 
+        </if>
+        <!-- 资产状态 -->
+	    <if test="'' != FSTATUSNAME and FSTATUSNAME !=null">
+            and FSTATUSNAME like '%'||#{FSTATUSNAME}||'%' 
+        </if> 
+        <!-- 使用部门 -->
+        <if test="''!= FDUTYDEPTNAME and FDUTYDEPTNAME !=null">  
+            and FDUTYDEPTNAME like '%'||#{FDUTYDEPTNAME}||'%' 
+        </if>
+        <!-- 责任部门 -->
+        <if test="''!= FRESPONSEDEPTNAME and FRESPONSEDEPTNAME !=null">
+            and FRESPONSEDEPTNAME like '%'||#{FRESPONSEDEPTNAME}||'%' 
+        </if>
+        <!-- 是否固定资产 -->
+        <if test="''!= FISFA and FISFA !=null">  
+            and FISFA like '%'||#{FISFA}||'%' 
+        </if>
+        <!-- 确认状态 -->
+        <if test="''!= FASSETCONFIRM and FASSETCONFIRM !=null">
+            and FASSETCONFIRM like '%'||#{FASSETCONFIRM}||'%' 
+        </if> 
+        <!-- 资产来源 -->
+        <if test="''!= FSOURCENAME and FSOURCENAME !=null">  
+            and FSOURCENAME like '%'||#{FSOURCENAME}||'%' 
+        </if>
+        <!-- 使用人 -->
+        <if test="'' != FDUTYPSNNAME and FDUTYPSNNAME !=null">  
+            and FDUTYPSNNAME like '%'||#{FDUTYPSNNAME}||'%' 
+        </if>  
+        <!-- 责任人 -->
+        <if test="''!= FRESPONSEPSNNAME and FRESPONSEPSNNAME !=null">  
+            and FRESPONSEPSNNAME like '%'||#{FRESPONSEPSNNAME}||'%' 
+        </if>  
+        <!-- 是否导入财务 -->
+        <if test="'' != FCHECKED and FCHECKED !=null">  
+            and FCHECKED like '%'||#{FCHECKED}||'%' 
+        </if>
+        <!-- 使用类型 -->
+        <if test="''!= FISDEPT and FISDEPT !=null">
+            and FISDEPT like '%'||#{FISDEPT}||'%' 
+        </if>  
+        <!-- 入库日期 -->
+        <if test="'' != FCREATETIME and FCREATETIME !=null">
+        	<if test="FCREATETIME == 1">
+        	and to_char(FCREATETIME,'yyyy')=to_char(sysdate,'yyyy')
+        	and to_char(FCREATETIME,'mm')=to_char(sysdate,'mm')
+        		and to_char(FCREATETIME,'dd')=to_char(sysdate,'dd')
+        	</if>
+        	<if test="FCREATETIME == 2">
+        	and to_char(FCREATETIME,'yyyy')=to_char(sysdate,'yyyy')
+        	and to_char(FCREATETIME,'mm')=to_char(sysdate,'mm')
+        		and to_char(FCREATETIME,'dd')=(to_char(sysdate,'dd')-1)
+        	</if>
+        	<if test="FCREATETIME == 3">
+        		and to_char(FCREATETIME,'yyyy')=to_char(sysdate,'yyyy')
+        		and to_char(FCREATETIME,'iw')=to_char(sysdate,'iw')
+        	</if>
+        	<if test="FCREATETIME == 4">
+        		and to_char(FCREATETIME,'yyyy')=to_char(sysdate,'yyyy')
+        		and to_char(FCREATETIME,'iw')=(to_char(sysdate,'iw')-1)
+        	</if>
+        	<if test="FCREATETIME == 5">
+        		and to_char(FCREATETIME,'yyyy')=to_char(sysdate,'yyyy')
+        		and to_char(FCREATETIME,'mm')=to_char(sysdate,'mm')
+        	</if>
+        	<if test="FCREATETIME == 6">
+        		and to_char(FCREATETIME,'yyyy')=to_char(sysdate,'yyyy')
+        		and to_char(FCREATETIME,'mm')=(to_char(sysdate,'mm')-1)
+        	</if>
+        	<if test="FCREATETIME == 7">
+        		and to_char(FCREATETIME,'yyyy')=to_char(sysdate,'yyyy')
+        	</if>
+        	<if test="FCREATETIME == 8">
+        		and to_char(FCREATETIME,'yyyy')=(to_char(sysdate,'yyyy')-1)
+        	</if>
+        	<if test="FCREATETIME == 9">
+        		and FCREATETIME &gt; to_date(#{pid1},'yyyy-mm-dd')  
+        		and FCREATETIME &lt; to_date(#{pid2},'yyyy-mm-dd')
+        	</if>
+        </if>  
+        <!-- 资产原值 -->
+        <if test="''!= FORIGINVALUE and FORIGINVALUE !=null">  
+            <if test="OPERATOR1 == 1">
+        		and FORIGINVALUE = #{FORIGINVALUE}
+        	</if>
+        	<if test="OPERATOR1 == 2">
+        		and FORIGINVALUE &gt; #{FORIGINVALUE}
+        	</if>
+        	<if test="OPERATOR1 == 3">
+        		and FORIGINVALUE &lt; #{FORIGINVALUE}
+        	</if>
+        	<if test="OPERATOR1 == 4">
+        		and FORIGINVALUE &gt;= #{FORIGINVALUE}
+        	</if>
+        	<if test="OPERATOR1 == 5">
+        		and FORIGINVALUE &lt;= #{FORIGINVALUE}
+        	</if>
+        	<if test="OPERATOR1 == 6">
+        		and FORIGINVALUE &lt;&gt; #{FORIGINVALUE}
+        	</if>
+        </if>
+        <!-- 资产净残值 -->
+		<if test="''!= FREMAINVALUE and FREMAINVALUE !=null">  
+            <if test="OPERATOR2 == 1">
+        		and FREMAINVALUE = #{FREMAINVALUE}
+        	</if>
+        	<if test="OPERATOR2 == 2">
+        		and FREMAINVALUE &gt; #{FREMAINVALUE}
+        	</if>
+        	<if test="OPERATOR2 == 3">
+        		and FREMAINVALUE &lt; #{FREMAINVALUE}
+        	</if>
+        	<if test="OPERATOR2 == 4">
+        		and FREMAINVALUE &gt;= #{FREMAINVALUE}
+        	</if>
+        	<if test="OPERATOR2 == 5">
+        		and FREMAINVALUE &lt;= #{FREMAINVALUE}
+        	</if>
+        	<if test="OPERATOR2 == 6">
+        		and FREMAINVALUE &lt;&gt; #{FREMAINVALUE}
+        	</if>
+        </if>
+        <!-- 检索条件 -->
+        <if test="''!= FUZZYSEARCH and FUZZYSEARCH !=null">  
+            and (FCODE like '%'||#{FUZZYSEARCH}||'%' 
+            or FNAME like '%'||#{FUZZYSEARCH}||'%' 
+            or FDUTYPSNNAME like '%'||#{FUZZYSEARCH}||'%' 
+            )
+        </if>   
+        	order by  FCREATETIME desc
+     </select>
+     
+     <update id="updateAc">
+     	update OA_AS_CARD 
+     	set FNAME=#{FNAME},
+     		FCHECKED=#{FCHECKED},
+     		FSPECTYPE=#{FSPECTYPE},
+     		FORIGINVALUE=#{FORIGINVALUE},
+     		FEXTENDSTR2=#{FEXTENDSTR2},
+     		FDUTYPSNNAME=#{FDUTYPSNNAME},
+     		FSTATUSNAME=#{FSTATUSNAME},
+     		FCREATETIME=TO_DATE(#{FCREATETIME},'yyyy-mm-dd'),
+     	where FCODE=#{FCODE}
+     </update>
+      <select id="existAc"  resultType="java.util.Map">
+        select count(2) as cnt from OA_AS_CARD where FCODE =#{FCODE} 
+     </select>
+ 
+ </mapper>

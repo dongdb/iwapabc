@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DBSourceList>
+	<!--JNDI  <DBSource id="webcms" isJndi="yes" desc="" jdbcUrl="java:comp/env/jdbc/webcmsdb" dbClass="com.nantian.iwap.persistence.DBAccessMySql" isDefault="yes"/>-->
+	<!-- JDBC -->
+	<DBSource id="webcms" 
+	dbPassword="iwap" 
+	dbUser="iwap" 
+	driverClassName="oracle.jdbc.driver.OracleDriver"  
+	isJndi="no" desc="" jdbcUrl="jdbc:oracle:thin:@127.0.0.1:1521:fams" 
+	dbClass="com.nantian.iwap.persistence.DBAccessOracle" isDefault="yes"/>
+</DBSourceList>
