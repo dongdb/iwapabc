@@ -201,31 +201,31 @@ h3.h3_title a{color: #999; text-decoration: none; position: relative;}
 /*.loginbody_bg{position: absolute; width: 100%; height: 100%;}
 .loginbody_bg img{width: 100%; height: 100%; }/*login*/
 .login{background: url(../images/bg.jpg) center center no-repeat; background-size: 100% 100%;overflow-y:auto;}
-	.login .center1{width: 810px; height: 350px; border: 4px #fff solid; /* border-radius:8px; */ position: absolute; left: 20%; top: 15%; }
-	.login .opcity{ position: absolute; left: 0; top: 0; width:100%; height: 100%; background: #fff; opacity: .6; filter:alpha(opacity=70);}
+	.login .center1{width: 810px; height: 100%;/* border: 4px #fff solid;  border-radius:8px; */ position: absolute; left: 20%; top: 15%; }
+	.login .opcity{ position: absolute; left: 0; top: 0; width:100%; height: 100%; background: #fff; opacity: .5; filter:alpha(opacity=70);}
 	.login_logo{position: absolute; top: 0; left:4px; margin-top: -40px;}
 .input_body{margin: 170px 5px 0 31%; position: relative; z-index: 2;}
 .input_body ul li{padding-left: 5px; padding-bottom: 6px;}
 
 @media screen and (max-width: 780px) {
-	.login .center1{width: 500px; height: 330px; border: 4px #fff solid; /* border-radius:8px; */  position: absolute; left: 45%; top: 25%;}
-	.login .opcity{ position: absolute; width:100%; height: 100%; background: #fff; opacity: .6; filter:alpha(opacity=70);}
+	.login .center1{width: 320px; height: 100%; position: absolute; left: 55%; top: 0%;}
+	.login .opcity{ position: absolute; width:100%; height: 100%; background: #fff; opacity: .5; filter:alpha(opacity=70);}
 	.login_logo{position: absolute; top: 0; left:4px; margin-top: -40px; }
-	.input_body{margin: 150px 5px 0 19%; position: relative; z-index: 2;}
+	.input_body{margin: 200px 5px 0 1%; position: relative; z-index: 2;}
 
 }
 @media screen and (max-width: 980px)  and (min-width: 781px){
-	.login .center1{width: 600px; height: 380px; border: 4px #fff solid; /* border-radius:8px; */ position: absolute; left: 40%; top: 25%;}
-	.login .opcity{ position: absolute; width:100%; height: 100%; background: #fff; opacity: .6; filter:alpha(opacity=70);}
+	.login .center1{width: 320px; height: 100%;  position: absolute; left: 60%; top: 0%;}
+	.login .opcity{ position: absolute; width:100%; height: 100%; background: #fff; opacity: .5; filter:alpha(opacity=70);}
 	.login_logo{position: absolute; top: 0; left:4px; margin-top: -40px; }
-	.input_body{margin: 170px 5px 0 22%; position: relative; z-index: 2;}
+	.input_body{margin: 220px 5px 0 2%; position: relative; z-index: 2;}
 
 }
 @media screen and (min-width: 981px){
-	.login .center1{width: 800px; height: 480px;/* border: 4px #fff solid;  border-radius:8px; */position: absolute; left: 45%; top: 20%;}
-	.login .opcity{ position: absolute; width:100%; height: 100%; background: #fff; opacity: .6; filter:alpha(opacity=70);}
-	.login_logo{position: absolute; top: 0; left:4px; margin-top: -40px;}
-	.input_body{margin: 200px 5px 0 31%; position: relative; z-index: 2;}
+	.login .center1{width: 320px; height: 100%;/* border: 4px #fff solid;  border-radius:8px; */position: absolute; left: 65%; top: 0%;}
+	.login .opcity{ position: absolute; width:100%; height: 100%; background: #fff; opacity: .5; filter:alpha(opacity=70);}
+	.login_logo{position: absolute; top: 0; left:4px; margin-top: -60px;}
+	.input_body{margin: 250px 5px 0 1%; position: relative; z-index: 2;}
 
 }
 

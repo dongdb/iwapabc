@@ -84,7 +84,7 @@ body, html {
 	<div class="center1">
 		<div class="logo login_logo"></div>
 		<div class="opcity"></div>
-		<div class="title_text">实物资产管理系统</div>
+		<!-- <div class="title_text">实物资产管理系统</div> -->
 		<div class="input_body ">
 			<form action="iwap.ctrl" method="post" id="loginFrm"
 				style="width: 400px;">
