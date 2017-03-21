@@ -1,0 +1,43 @@
+.header {
+    height: 54px;
+    background-color: white;
+    text-align: right;
+    line-height: 54px;
+    position: relative;
+}
+
+.header .logo {
+    height: 36px;
+    margin-top: 9px;
+    margin-right: 20px;
+}
+
+.content {
+    background: url("../images/bg.jpg");
+    height: 667px;
+    position: relative;
+}
+
+.content .login {
+    background: url("../images/loadback.png");
+    height: 665px;
+    width: 323px;
+    position: absolute;
+    left: 850px;
+    top: 0;
+
+}
+
+.content .login .formLogin {
+    margin-top: 222px;
+    text-align: center;
+}
+
+.footer {
+    height: 45px;
+    line-height: 45px;
+    text-align: left;
+    padding-left: 35px;
+    font-family: "microsoft yahei";
+    font-size: 12px;
+}

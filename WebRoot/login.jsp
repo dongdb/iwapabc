@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,99 +8,89 @@
 <title>实物资产管理系统</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
-<link href="css/font-awesomecss/font-awesome.css" rel="stylesheet"
-	type="text/css">
-<link href="css/font-awesomecss/font-awesome-ie7.min.css"
-	rel="stylesheet" type="text/css">
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-<link href="css/iwapui-style.css" rel="stylesheet" type="text/css">
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/UtilTool.js"></script>
-<script src="js/TextField.js"></script>
-<script src="js/ButtonField.js"></script>
-<script src="js/ButtonField_login.js"></script>
-<style type="text/css">
-/*样式写在此处是因为此页面需要BODY高度单独设为高度百分百*/
-body, html {
-	height: 100%;
-	overflow-y: hidden;
-}
-</style>
-<script type="text/javascript">
-	$(document).ready(function() {
-		var institutionsbox = null;
-		var pswbox = null;
-		institutionsbox = $.IWAP.TextField({
-			label : '',
-			allowBlank : false,
-			validatorText : '请输入用户编号',
-			minLength : 5,
-			name : 'userId',
-			value : '',
-			renderTo : 'institutionsbox'
-		});
-		pswbox = $.IWAP.TextField({
 
-			allowBlank : false,
-			validatorText : '请输入登录密码',
-			minLength : 5,
-			value : '',
-			name : 'password',
-			type : 'password',
-			renderTo : 'pswbox'
-		});
-		var buttonbox = null;
-		buttonbox1 = $.IWAP.ButtonField_login({
-			label : '登	 录',
-			click : function() {
-				if (institutionsbox.validate() && pswbox.validate()) {
-					$("#loginFrm").submit();
-				}
-			},
-			renderTo : "buttonbox",
-			disabled : false
-		});
-		/* buttonbox2=$.IWAP.ButtonField({
-		    label: '重置',
-		    click:function (){institutionsbox.setValue('');pswbox.setValue('');},
-		    renderTo:"buttonbox",
-		    disabled:false
-		}); */
-		$(function() {
-			document.onkeydown = function(e) {
-				var ev = document.all ? window.event : e;
-				if (ev.keyCode == 13) {
-					$("#loginFrm").submit();
-				}
-			}
-		});
-	});
+
+<link href="css/Common.css" rel="stylesheet" >
+<link href="css/Login.css" rel="stylesheet" >
+
+<link href="js/bootstrap2/css/bootstrap.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.9.0.js"></script>
+<script src="js/bootstrap2/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+
+function CTRLReSize() {
+    $(document).height($(window).height());
+    var a = $(window).height() - $('#header').height() - $('#footer').height();
+    $('#content,#divLogin').height(a)
+}
+
+$(document).ready(function () {
+    $('#txtUserName').focus();
+
+    CTRLReSize();
+    $(window).resize(function () {
+        CTRLReSize();
+    })
+    $('#submitLogin').on('click',function(){
+    	var userId = $('#txtUserName').val();
+    	var password = $('#txtpwd').val();
+    	var msg = $('#msg').html();
+    	if(!userId){
+    		$('#msg').html(msg.replace(/-&gt;.*/,'->用户名不能为空！'));    		
+    		return false;
+    	}else if(!password){
+    		$('#msg').html(msg.replace(/-&gt;.*/,'->密码不能为空！'));    		
+    		return false;
+    	}
+    	$("#formLogin").submit();    	
+    });
+})
+
 </script>
 </head>
-<body class="iwapui login pr">
+<body>
+<div class="header" id="header">
+<img src="images/logo.png" class="logo" alt="nantian infomation" >
+</div>
 
-	<div class="center1">
-		<div class="logo login_logo"></div>
-		<div class="opcity"></div>
-		<!-- <div class="title_text">实物资产管理系统</div> -->
-		<div class="input_body ">
-			<form action="iwap.ctrl" method="post" id="loginFrm"
-				style="width: 400px;">
-				<input type="hidden" id="txcode" name="txcode" size="15"
-					value="login"> <input type="hidden" id="actionId"
-					name="actionId" size="15" value="login">
-				<ul>
-					<li id="institutionsbox" class="institutions"></li>
-					<li id="pswbox" class="pswbox"></li>
-					<li id="msg"><span style="color: red">${errorMsg}</span></li>
+<div class="content" id="content">
+    <div class="login" id="divLogin">
+        <form class="formLogin" id="formLogin" action="iwap.ctrl" method="post">
+            <input type="hidden" id="txcode" name="txcode" size="15" value="login">
+           <input type="hidden" id="actionId" name="actionId" size="15" value="login">
+            <div class="input-prepend" style="margin-bottom: 27px">
+                <span class="add-on" style=" width:50px"><img src="images/institutions.png"></span>
+                <input class="span2 error" id="txtUserName" type="text" placeholder="工号/身份证号" style="width:215px" name="userId"/>
 
-				</ul>
-			</form>
-		</div>
-		<div id="buttonbox" class="marginauto buttonbody"></div>
-	</div>
-	<!-- <div class="copyright">版权所有：广州南天电脑系统有限公司</div> -->
+            </div>
+
+            <div class="input-prepend" style="margin-bottom: 20px">
+                <span class="add-on" style=" width:50px"><img src="images/psw.png"></span>
+                <input class="span2" id="txtpwd" type="password" placeholder="请输入密码" style="width:215px" name="password">
+            </div>
+
+            <div class="input-prepend" style="margin-bottom: 20px;text-align: left;width:275px">
+               <input type="checkbox" name="jizhumima" id="jizhumima">
+                <label style="display: inline" for="jizhumima">记住密码</label>
+
+              <!-- <a style="padding-left: 130px">忘记密码</a> -->
+            </div>
+
+            <div class="input-prepend">
+                <input id="submitLogin" type="submit" value="登&nbsp;&nbsp;陆" style=" background-color: #4eb2d4; color: white; font-family: 微软雅黑; font-size: 14px;
+                  height:32px; width:275px; border:0" />
+            </div>
+
+            <%-- <span class="label label-important" id="msg">提示信息->${errorMsg}</span>  --%>           
+        </form>
+    </div>
+</div>
+<div class="footer" id="footer">
+    ©2016-云南南天电子信息股份有限责任公司-版权所有
+</div>
+
+
 </body>
 </html>
