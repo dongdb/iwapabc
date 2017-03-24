@@ -79,7 +79,7 @@ $(document).ready(function () {
             </div>
 
             <div class="input-prepend">
-                <input id="submitLogin" type="submit" value="登&nbsp;&nbsp;陆" style=" background-color: #4eb2d4; color: white; font-family: 微软雅黑; font-size: 14px;
+                <input id="submitLogin" type="submit" value="登&nbsp;&nbsp;录" style=" background-color: #4eb2d4; color: white; font-family: 微软雅黑; font-size: 14px;
                   height:32px; width:275px; border:0" />
             </div>
 

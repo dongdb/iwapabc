@@ -13,13 +13,17 @@
 <link href="<%=request.getContextPath() %>/css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="<%=request.getContextPath() %>/css/style.css" rel="stylesheet" type="text/css">
 <link href="<%=request.getContextPath() %>/css/iwapui-style.css" rel="stylesheet" type="text/css">
+<link href="<%=request.getContextPath() %>/css/easyui.css" rel="stylesheet" type="text/css">
 <script src="<%=request.getContextPath() %>/js/jquery.min.js"></script>
+<script src="<%=request.getContextPath() %>/js/jquery-1.9.0.js"></script>
 <script src="<%=request.getContextPath() %>/js/bootstrap.min.js"></script>
 <script src="<%=request.getContextPath() %>/js/UtilTool.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath() %>/js/jquery.ztree.all-3.5.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath() %>/js/jquery.ztree.exhide-3.5.js"></script>
 <script src="<%=request.getContextPath() %>/js/Menu.js"></script>
 <script src="<%=request.getContextPath() %>/js/MenuField3.js"></script>
+<script src="<%=request.getContextPath() %>/js/jquery.easyui.min.js"></script>
+<script src="<%=request.getContextPath() %>/js/jquery.tabs.js"></script>
 
 <style type="text/css">
 /*样式写在此处是因为此页面需要BODY高度单独设为高度百分百*/
@@ -27,56 +31,76 @@
 .changeBg{  background-image: url("../images/select-bg.png");  }
 </style>
 </head>
-<body class="iwapui">
-<div id="head" class="head clearfix">
-    <div class="Hleft_box">
-       	<div class="clearfix">
-       		<div class="logo"></div>
-       		<div class="logotext">实物资产管理系统</div>
-       	</div>       	
-    </div>
-    <div class="Hright_box clearfix">
-    	<div class="h_top">
-    		<a class="date" id="date" title="<%=DateUtil.getCurrentDate("yyyy-MM-dd") %>"><i></i>
-    			<img alt="" src="../iwapabc/images/icon/calendar.png"/></a>
-    		<a href="javascript:void(0)" class="mdfPwd" onclick="mdfPwd()" title="修改密码"><i></i><img alt="" src="../iwapabc/images/icon/key.png"/></a>
-    		<a href="#" class="changemenu" title="换菜单"><i></i><img alt="" src="../iwapabc/images/icon/menu.png"/></a>
-    		<a href="javascript:void(0)" class="home" onclick="getHome()" title="首页"><i></i><img alt="" src="../iwapabc/images/icon/home.png"/></a>
-    		<a href="<%=request.getContextPath() %>/screen/loginOut.jsp" class="exit_on" title="退出"><i></i><img alt="" src="../iwapabc/images/icon/exit.png"/></a>
+<body class="iwapui" style="background-image:url(../iwapabc/images/bg1.jpg);">
+	<div id="head" class="head clearfix" style="background-color:transparent;">
+    	<div class="Hleft_box">
+       		<div class="clearfix">
+       			<div><h3 style="color:#fff; margin-left:20px;">实 物 资 产 管 理 系 统</h3></div>
+       		</div>       	
     	</div>
-    	<div class="h_bottom">
-    	  <i><%=DateUtil.getCurrentDate("yyyy-MM-dd") %></i>
-          <i>机构号：${userInfo.ORG_ID}</i>
-          <i>用户名：${userInfo.ACCT_NM}</i>
-      	</div>
     </div> 
-    <div class="head_bottom">
-    	<input id="title" disabled="disabled" value="首页" type="text">
-    </div>    
-</div>
-<div class="menubar menuflag" id="menubar">
-</div>
-<div class="center">
-	<div class="left_box" id="left_box">
-		<div class="left_bottom" id="left_bottom">
-			<button title="隐藏" id="hide" onclick="hide()"></button>
+    <div class="center">
+		<!--左侧菜单-->
+		<div  class="left_box" id="left_box" style="margin-left:30px;width:190px;
+			height:85%;float:left;background-color:rgba(255,255,255,0.4);">
+		</div>
+   		<!--用户信息（右上）-->
+   		<div style="margin-right:20px;width:160px;height:180px;float:right;
+   			background-color:rgba(0,0,1,0.2);color:#fff;text-align:center;font-size:14px;">
+   			<img alt="" src="../iwapabc/images/admin.jpg;"
+   				style="background-color:#fff;width:70px;height:70px;
+   				border:1px solid #fff;border-radius:50px;margin:22px; ">
+   			<div> <i>欢迎	${userInfo.ACCT_NM}</i> </div>
+   			<div> <i>机构号：${userInfo.ORG_ID}</i></div>
+   			<div> <i><%=DateUtil.getCurrentDate("yyyy-MM-dd") %></i></div>
+		</div>
+		<!--快捷方式（右下）-->
+		<div style="margin-top:190px;margin-right:-160px;width:160px;height:55%;
+			float:right;background-color:rgba(0,0,0,0.2);">
+			<div style="margin-top:25px;margin-left:35px;">
+				<img alt="" src="../iwapabc/images/kjfs.png;">			
+			</div>
+			<div style="margin-top:20px;margin-left:25px">
+				<a href="javascript:void(0)" class="home" onclick="getTask()" title="待办事项"><img alt="" src="../iwapabc/images/icon/dbsx.png;" style="width:100px;height:25px;margin-top:30px;"></a>
+				<a href="javascript:void(0)" class="mdfPwd" onclick="mdfPwd()" title="修改密码"><img alt="" src="../iwapabc/images/icon/xgmm.png;" style="width:100px;height:25px;margin-top:30px;"></a>
+				<a href="javascript:void(0)" class="home" onclick="getHome()" title="首页"><img alt="" src="../iwapabc/images/icon/sy.png;" style="width:100px;height:25px;margin-top:30px;"></a>
+				<a href="<%=request.getContextPath() %>/screen/loginOut.jsp" class="exit_on" title="退出"><img alt="" src="../iwapabc/images/icon/tc.png;" style="width:100px;height:25px;margin-top:30px;"></a>
+			</div>
+		</div> 
+		<!--窗口导航-->
+			<div id="title"></div>
+		<!--主窗口-->
+		<div style="margin-left:230px;margin-top:10px;width:69%;height:85%;
+			float:top;background-color:transparent; ">
+			<div id="tt" class="easyui-tabs" style="width:100%;height:100%;">
+				<div title="待办事项" class="tabs-inner">
+					<iframe src="./screen/system/homePage.jsp" style="overflow:hide;font-size:13px;width:100%;height:96%;"></iframe>';  
+    			</div>
+			</div>
+			<!-- <iframe name="main"  id="main" width="100%" height="100%"  
+				src="./screen/system/homePage.jsp" style="font-size:13px;min-width:940px;overflow-x:auto;"></iframe>
+		 	-->
 		</div>
 	</div>
-	<div class="right_box">
-		<iframe name="main"  id="main" width="100%" height="100%"  scrolling="auto" frameborder="0" src="./screen/system/homePage.jsp"></iframe>
-	</div>
-</div>
-<div class="bottom Hright_box">
-	  
-</div>
 </body>
 <SCRIPT type="text/javascript">
 var flag=0;
 function getHome(){
-	$("#main").attr('src','./screen/system/homePage.jsp');
+	//$("#main").attr('src','./screen/system/homePage.jsp');
+	var href = "./screen/system/homePage.jsp";
+	var title1 = "首页";
+	addTab(title1,href);
+}
+function getTask(){
+	//$("#main").attr('src','./screen/system/homePage.jsp');
+	var href = "./screen/system/homePage.jsp";
+	var title1 = "待办事项";
+	addTab(title1,href);
 }
 function mdfPwd(){
-	$("#main").attr('src','<%=request.getContextPath()%>/iwap.ctrl?txcode=modifyPwd');
+	var href = "<%=request.getContextPath()%>/iwap.ctrl?txcode=modifyPwd";
+	var title1 = "修改密码";
+	addTab(title1,href);
 }
 function hide(){
 	if (flag==0){
@@ -97,7 +121,46 @@ function hide(){
 		flag=0;
 	}
 }
-  $(document).ready(function(){	  
+/**     
+ * 新建tab 
+ * @zsj  
+ *example: {tabTitle:'tabTitle',url:'refreshUrl'} 
+ *如果tabTitle为空，则默认刷新当前选中的tab 
+ *如果url为空，则默认以原来的url进行reload 
+ */
+function addTab(title, href){  
+	if ($('#tt').tabs('exists', title)){//如果tab已经存在,则选中并刷新该tab   
+		$('#tt').tabs('select', title);  
+        //refreshTab({tabTitle:title,url:href});  
+    } else {  
+        if (href){  
+            var content = '<iframe  frameborder="0"  src="'+href+'" style="width:100%;height:100%;"></iframe>';  
+        } else {  
+            var content = '未实现';  
+        }  
+        $('#tt').tabs('add',{  
+            title:title,  
+            content:content,  
+            closable:true
+		      
+        }); 
+    }
+}  
+/**     
+ * 刷新tab 
+ * @zsj  
+ */  
+function refreshTab(cfg){  
+    var refresh_tab = cfg.tabTitle?$('#tabs').tabs('getTab',cfg.tabTitle):$('#tabs').tabs('getSelected');  
+    if(refresh_tab && refresh_tab.find('iframe').length > 0){  
+    var _refresh_ifram = refresh_tab.find('iframe')[0];  
+    var refresh_url = cfg.url?cfg.url:_refresh_ifram.src;  
+    //_refresh_ifram.src = refresh_url;  
+    _refresh_ifram.contentWindow.location.href=refresh_url;  
+    }  
+}  
+  $(document).ready(function(){
+	 
 	  $.IWAP.iwapRequest("iwap.ctrl",{txcode:"getUserMenu"},
 			  function(rst){
 		  		if(rst["header"]["retcode"]<1){//存在业务错误
@@ -127,7 +190,10 @@ function hide(){
 			            			  if(data["moduleUrl"]){
 			            				  $("#main").attr("src",data["moduleUrl"]);
 			            			  }else{
-			            				  $("#main").attr("src","iwap.ctrl?txcode="+data['moduleOpCode']);
+			            				  var href = "iwap.ctrl?txcode="+data['moduleOpCode'];
+			            				  //$("#main").attr("src",href);
+			            				  var title1 = data['moduleNm'];
+			            				  addTab(title1,href);
 			            			  }
 			            		  }
 			            	  }
@@ -204,7 +270,7 @@ function hide(){
 				    });
 		  		}
 	  		}
-	  );
+	  );	
   });
 </SCRIPT>
 </html>

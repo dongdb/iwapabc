@@ -53,7 +53,7 @@
 				</a>
 			</div>
 			<div class="col-md-12"
-				style="height: 30px; background-color: #DCDCDC;">
+				style="height: 30px; background-color: #d0e4ff;">
 				<div class="col-md-8">
 					<h5>出库信息</h5>
 				</div>
@@ -100,7 +100,7 @@
 				</form>
 			</div>
 			<div class="col-md-12"
-				style="height: 30px; background-color: #DCDCDC;">
+				style="height: 30px; background-color: #d0e4ff;">
 				<div class="col-md-8">
 					<h5>入库信息</h5>
 				</div>
@@ -204,7 +204,7 @@
 				</div>
 			</div>
 			<div class="col-md-12"
-				style="height: 30px; background-color: #DCDCDC;">
+				style="height: 30px; background-color: #d0e4ff;">
 				<div class="col-md-8">
 					<h5>资产明细</h5>
 				</div>

@@ -50,7 +50,7 @@
 				<h4 class="modal-title">资产确认</h4>
 			</div>
 			<div class="col-md-12"
-				style="height: 30px; background-color: #DCDCDC;">
+				style="height: 30px; background-color: #d0e4ff;">
 				<h5>资产入库单</h5>
 			</div>
 			

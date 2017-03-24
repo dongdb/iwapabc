@@ -1077,7 +1077,7 @@ th {
           box-sizing: border-box;
 }
 html {
-  font-size: 10px;
+  font-size: 12px;
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -1933,7 +1933,7 @@ pre code {
     margin-left: 0;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 940px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
@@ -2272,7 +2272,10 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 3px;
+  padding-right: 3px;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ddd;

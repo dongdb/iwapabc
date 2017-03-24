@@ -51,7 +51,7 @@
 				<h4 class="modal-title">合同详细信息</h4>
 			</div>
 			<div class="col-md-12"
-				style="height: 30px; background-color: #DCDCDC;">
+				style="height: 30px; background-color: #d0e4ff;">
 				<h5>合同信息</h5>
 			</div>
 			<div class="col-md-12">
@@ -146,7 +146,7 @@
 				</form>
 			</div>
 			<div class="col-md-12"
-				style="height: 30px; background-color: #DCDCDC;">
+				style="height: 30px; background-color: #d0e4ff;">
 				<h5>所属工程</h5>
 			</div>
 			<div class="col-md-12">

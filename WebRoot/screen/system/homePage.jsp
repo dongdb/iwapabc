@@ -13,7 +13,9 @@
 <link href="${ctx}/css/style.css" rel="stylesheet">
 <link href="${ctx}/css/iwapui-style.css" rel="stylesheet" type="text/css">
 <link href="${ctx}/css/zTreeStyle.css" rel="stylesheet">
+<link href="${ctx}/css/easyui.css" rel="stylesheet">
 <!-- JQ必须在最JS上面 -->
+
 <script src="${ctx}/js/jquery.min.js"></script>
 <script src="${ctx}/js/UtilTool.js"></script>
 <script src="${ctx}/js/Form.js"></script>
@@ -32,25 +34,25 @@
 </head>
 <body class="iwapui center_body">
 	<div class="col-md-12" style="margin-top:10px;">
-		<div style="border: 1px solid #a6bfe0; width:100%; height:250px;">
-			<div style="border:none; background-color: #a6bfe0; height:23px; font-size:14px;">
+		<div style="border: 1px solid #d0e4ff; width:100%; height:250px;">
+			<div style="border:none; background-color: #d0e4ff; height:23px; font-size:15px;">
 				&nbsp;&nbsp; 待 办 任 务
 			</div>
 			<div style="height:225px; overflow-y:auto;">
 			<table id="tesReady" style="width:100%;
-				border-collapse:separate; border-spacing:10px; font-size:13px;">
+				border-collapse:separate; border-spacing:10px; font-size:14px;">
 			</table>
 			</div>
 		</div>
 	</div>
 	<div class="col-md-12" style="margin-top:10px;">
-		<div style="border: 1px solid #a6bfe0; width:100%; height:250px;">
-			<div style="border:none; background-color: #a6bfe0; height:23px; font-size:14px;">
+		<div style="border: 1px solid #d0e4ff; width:100%; height:250px;">
+			<div style="border:none; background-color: #d0e4ff; height:23px; font-size:15px;">
 				 &nbsp;&nbsp; 提 交 任 务
 			</div>
 			<div style="height:225px; overflow-y:auto;">
 			<table id="finished" style="width:100%; 
-				border-collapse:separate; border-spacing:10px; font-size:13px;"">
+				border-collapse:separate; border-spacing:10px; font-size:14px;"">
 			</table></div>
 		</div>
 	</div>

@@ -49,7 +49,7 @@
 				<img alt="" src="../iwapabc/images/icon/save.png"/> 保存</a>
 			</div>
 			</div> 
-			<div class="col-md-12" style="height: 30px; background-color: #DCDCDC;">
+			<div class="col-md-12" style="height: 30px; background-color: #d0e4ff;">
 				<div class="col-md-8">
 					<h5>基本信息</h5>
 				</div>
@@ -181,7 +181,7 @@
 				</div>
 			</div>
 			</div>
-			<div class="col-md-12" style="height: 30px; background-color: #DCDCDC;">
+			<div class="col-md-12" style="height: 30px; background-color: #d0e4ff;">
 				<div class="col-md-8">
 					<h5>资产明细</h5>
 				</div>

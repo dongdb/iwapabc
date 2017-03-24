@@ -61,7 +61,7 @@
 				</a>
 			</div>
 			<div class="col-md-12"
-				style="height: 30px; background-color: #DCDCDC;">
+				style="height: 30px; background-color: #d0e4ff;">
 				<div class="col-md-8">
 					<h5>安排信息：</h5>
 				</div>
@@ -162,7 +162,7 @@
 					<!-- <th data-grid-name="FCREATETIME">提交时间</th> -->
 				</form>
 			</div>
-			<div class="col-md-12" style="height: 30px; background-color: #DCDCDC;">
+			<div class="col-md-12" style="height: 30px; background-color: #d0e4ff;">
 				<h5>资产信息</h5>
 			</div>
 			<div class="table_nav2 col-md-12">
@@ -341,7 +341,7 @@
 				</a>
 			</div>
 			<div class="col-md-12"
-				style="height: 30px; background-color: #DCDCDC;">
+				style="height: 30px; background-color: #d0e4ff;">
 				<div class="col-md-8">
 					<h5>安排信息：</h5>
 				</div>
@@ -426,7 +426,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="col-md-12" style="height: 30px; background-color: #DCDCDC;">
+			<div class="col-md-12" style="height: 30px; background-color: #d0e4ff;">
 				<h5>资产信息</h5>
 			</div>
 			<div class="col-md-12">

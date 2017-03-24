@@ -49,7 +49,7 @@
 				<h4 class="modal-title">入库记录</h4>
 			</div>
 			<div class="col-md-12"
-				style="margin: 0px 5px; width: 920px; height: 30px; background-color: #DCDCDC;">
+				style="margin: 0px 5px; width: 920px; height: 30px; background-color: #d0e4ff;">
 				<div class="col-md-8">
 					<h5>基本信息：</h5>
 				</div>
@@ -151,7 +151,7 @@
 			</div>
 
 			<div class="col-md-12"
-				style="margin: 0px 5px; width: 920px; height: 30px; background-color: #DCDCDC;">
+				style="margin: 0px 5px; width: 920px; height: 30px; background-color: #d0e4ff;">
 				<div class="col-md-8">
 					<h5>资产明细：</h5>
 				</div>
@@ -457,7 +457,7 @@
 	<form method="post" onsubmit="return false" id="dialogarea">
 		<!-- form开始 -->
 		<div class="col-md-10"
-			style="margin-bottom: 10px; margin-left: 15px; height: 30px; background-color: #DCDCDC;">
+			style="margin-bottom: 10px; margin-left: 15px; height: 30px; background-color: #d0e4ff;">
 			<div class="col-md-8">
 				<h5>基本信息：</h5>
 			</div>

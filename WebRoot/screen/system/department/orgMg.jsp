@@ -81,7 +81,7 @@
 	<hr>--%>
 	<div class="col-md-12" style="height: 100%;">
 		<br>
-		<div class="col-md-4" style="height: 100%; border: 1px solid #a6bfe0;">
+		<div class="col-md-4" style="height: 100%; border: 1px solid #d0e4ff;">
 			<!-- 表格工具栏　开始 -->
 			<div class="table_nav2">
 				<form id="Conditions">
@@ -106,11 +106,11 @@
 			<!-- 表格工具栏　END -->
 			<div class="table_box col-md-12" style="height:100%;">
 				<br>
-				<div style="height:80%; overflow-y:auto;" id="tree"></div>
+				<div style="height:86%; overflow-y:auto;" id="tree"></div>
 				
 			</div>
 		</div>
-		<div class="col-md-8" style="height: 100%; border: 1px solid #a6bfe0;">
+		<div class="col-md-8" style="height: 100%; border: 1px solid #d0e4ff;">
 			<!-- 表格工具栏　开始 -->
 			<div class="table_nav2">
 				<form id="pConditions">
@@ -133,11 +133,11 @@
 				</form>
 			</div>
 			<!-- 表格工具栏　END -->
-			<div class="table_box" style="height:80%;">
+			<div class="table_box" style="height:90%;min-width:50%;overflow:auto;">
 				<table id="iwapGrid"
 					class="mygrid table table-bordered table-striped table-hover"
 					data-iwap="grid" data-iwap-id="" data-iwap-param=""
-					data-iwap-pagination="true">
+					data-iwap-pagination="true" style="width:1200px;">
 					<tr>
 						<th data-grid-name="ACCT_ID" primary="primary" data-order="" style="width:45px;">选择<s><input
 								id="radio1" name="radio1" type="radio"
@@ -175,7 +175,7 @@
 		fuzzySearch = $.IWAP.TextField({
 			label : '模糊搜索',
 			renderTo : 'fuzzySearch',
-			width : '100px',
+			width : '60px',
 		});
 		personSearch = $.IWAP.TextField({
 			label : '模糊搜索',
