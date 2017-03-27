@@ -715,17 +715,15 @@
 	</div>
 
 	<div class="col-md-12">
-		<div class="col-md-12">
-			<div class="table_nav2" style="border: 1px solid white;">
-				<a href="javaScript:void(0)" id="saveAll" onclick="assetConfirm()">
-					<img alt="" src="../iwapabc/images/icon/save.png" /> 保存
-				</a> <a href="javaScript:void(0)" id="doStorage"
-					onclick="assetConfirm()"> <img alt=""
-					src="../iwapabc/images/icon/storage.png" /> 资产入库
-				</a> <a href="javaScript:void(0)" id="doCommit" onclick="assetConfirm()">
-					<img alt="" src="../iwapabc/images/icon/storage.png" /> 提交
-				</a>
-			</div>
+		<div class="table_nav2" style="border: 1px solid white;">
+			<a href="javaScript:void(0)" id="saveAll" onclick="assetConfirm()">
+				<img alt="" src="../iwapabc/images/icon/save.png" /> 保存
+			</a> <a href="javaScript:void(0)" id="doStorage"
+				onclick="assetConfirm()"> <img alt=""
+				src="../iwapabc/images/icon/storage.png" /> 资产入库
+			</a> <a href="javaScript:void(0)" id="doCommit" onclick="assetConfirm()">
+				<img alt="" src="../iwapabc/images/icon/storage.png" /> 提交
+			</a>
 		</div>
 		<div class="col-md-12"
 			style="height: 30px; background-color: #d0e4ff;">
@@ -750,7 +748,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="inputbox" style="margin: 2px;">
-						责&nbsp;任&nbsp;人&nbsp;<select data-iwap-xtype="ListField"
+						 责&nbsp;任&nbsp;人&nbsp;<select style="margin-left:7px;" data-iwap-xtype="ListField"
 							name="FRESPONSEPSNNAME" class="select_content"
 							id="FRESPONSEPSNNAME">
 							<option value="${userInfo.ACCT_ID }" selected="selected">${userInfo.ACCT_NM }</option>
@@ -806,7 +804,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="inputbox" style="margin: 2px;">
-						供&nbsp;应 &nbsp;商 <input name="FSUPPLIER" type="text"
+						供 应 商 <input style="margin-left:7px;" name="FSUPPLIER" type="text"
 							disabled="disabled" data-iwap-xtype="TextField" id="FSUPPLIER"
 							class="input_text_1">
 					</div>

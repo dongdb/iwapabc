@@ -63,7 +63,7 @@ a.btn-default,.iwapui a.btn-default:hover{color: #000;}
 .menubar{ background:#EAEAEA;}
 .menubar a{margin-left:10px; cursor: pointer;}
 /*center*/
-.center{height: 100%; width:100%;min-width:1270px;}
+.center{height: 100%; width:100%;min-width:1350px;}
 .bottom{height: 3%;min-height:20px;background-color: #0a85be; min-width:1270px;}
 ::-webkit-scrollbar-track
 {
@@ -147,8 +147,8 @@ h3.h3_title a{color: #999; text-decoration: none; position: relative;}
 .iwapui .table_nav{border: 1px dashed #EFEEEE; border-bottom: 0; background: #F9F9F9; padding-top: 5px; text-align: left;}
 .iwapui .table_nav2{border: 1px solid transparent; border-bottom: 0; background: transparent; padding-top: 5px;padding-bottom: 2px; text-align: left;}
 .iwapui .table_nav a{cursor: pointer; height: 26px; line-height: 26px; padding: 0 15px; margin: 2px 10px; display: inline-block; border-radius: 4px; background-color: #33B7B1; color: #fff; border: 1px solid #30A770;}
-.iwapui .table_nav2 a{cursor: pointer; height: 30px; line-height: 26px; padding: 0 8px; display: inline-block; border-radius: 4px; background-color: #ffffff; color: black; border: 1px solid #c8c8c8;}
-.iwapui .table_nav2 .disa{cursor: default; height: 30px; line-height: 26px; padding: 0 8px; display: inline-block; border-radius: 4px; background-color: #ffffff; color: #cfcfcf; border: 1px solid #c8c8c8;}
+.iwapui .table_nav2 a{cursor: pointer; height: 30px; line-height: 26px; padding: 0 8px; display: inline-block; border-radius: 0px; background-color: #ffffff; color: black; border: 1px solid #c8c8c8;}
+.iwapui .table_nav2 .disa{cursor: default; height: 30px; line-height: 26px; padding: 0 8px; display: inline-block; border-radius: 0px; background-color: #ffffff; color: #cfcfcf; border: 1px solid #c8c8c8;}
 .iwapui .table_nav a:hover{background: #029494; border:1px solid #01A559;}
 .iwapui .table_nav2 a:hover{background: #eaeaea; border:1px solid #c8c8c8;}
 .iwapui .table_nav2 .disa:hover{background: #ffffff; border:1px solid #c8c8c8;}

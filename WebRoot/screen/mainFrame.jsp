@@ -16,6 +16,7 @@
 <link href="<%=request.getContextPath() %>/css/easyui.css" rel="stylesheet" type="text/css">
 <script src="<%=request.getContextPath() %>/js/jquery.min.js"></script>
 <script src="<%=request.getContextPath() %>/js/jquery-1.9.0.js"></script>
+<script src="<%=request.getContextPath() %>/js/jquery-3.2.0.min.js"></script>
 <script src="<%=request.getContextPath() %>/js/bootstrap.min.js"></script>
 <script src="<%=request.getContextPath() %>/js/UtilTool.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath() %>/js/jquery.ztree.all-3.5.js"></script>
@@ -70,11 +71,11 @@
 		<!--窗口导航-->
 			<div id="title"></div>
 		<!--主窗口-->
-		<div style="margin-left:230px;margin-top:10px;width:69%;height:85%;
+		<div style="margin-left:230px;margin-top:10px;width:69%;min-width:940px;height:85%;
 			float:top;background-color:transparent; ">
 			<div id="tt" class="easyui-tabs" style="width:100%;height:100%;">
 				<div title="待办事项" class="tabs-inner">
-					<iframe src="./screen/system/homePage.jsp" style="overflow:hide;font-size:13px;width:100%;height:96%;"></iframe>';  
+					<iframe src="./screen/system/homePage.jsp" style="min-width:940px;overflow-x:auto;font-size:13px;width:100%;height:96%;"></iframe>';  
     			</div>
 			</div>
 			<!-- <iframe name="main"  id="main" width="100%" height="100%"  
@@ -134,7 +135,7 @@ function addTab(title, href){
         //refreshTab({tabTitle:title,url:href});  
     } else {  
         if (href){  
-            var content = '<iframe  frameborder="0"  src="'+href+'" style="width:100%;height:100%;"></iframe>';  
+            var content = '<iframe  frameborder="0"  src="'+href+'" style="min-width:940px;overflow-x:auto;width:100%;height:100%;"></iframe>';  
         } else {  
             var content = '未实现';  
         }  

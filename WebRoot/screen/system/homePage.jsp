@@ -17,6 +17,7 @@
 <!-- JQ必须在最JS上面 -->
 
 <script src="${ctx}/js/jquery.min.js"></script>
+<script src="${ctx}/js/jquery-3.2.0.min.js"></script>
 <script src="${ctx}/js/UtilTool.js"></script>
 <script src="${ctx}/js/Form.js"></script>
 <script src="${ctx}/js/TextField.js"></script>
