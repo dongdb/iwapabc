@@ -162,16 +162,14 @@
 		<input type="hidden" id="deptid" value="<%=deptid %>"
 			disabled="disabled">
 		<div class="input_body"
-			style="margin-top: 50px; font-size: 14px; font-weight: normal; line-height: 20px;">
+			style="margin-left:25%;margin-top:40px; font-size: 14px; font-weight: normal; line-height: 20px;">
 			<ul>
 				<li id="deptid_show" name="deptid_show"></li>
 				<li id="deptname" name="deptname"></li>
 				<li id="deptfullname" name="deptfullname"></li>
 				<li>
 					<div class="selectbox">
-						<label class="select_label" style="margin-left: -5px;">机构等级:</label>
-						<select name="deptlevel" class="select_content" id="deptlevel"
-							style="margin-left: 8px;"></select>
+						<span>机构等级：</span><select name="deptlevel" class="select_content" id="deptlevel"></select>
 					</div>
 				</li>
 				<li id="parent_li">
@@ -179,12 +177,10 @@
 				</li>
 				<li>
 					<div class="selectbox">
-						<label class="select_label" style="margin-left: -5px;">机构状态:</label>
-						<select name="state" class="select_content" id="state"
-							style="margin-left: 8px;"></select>
+						<span>机构状态：</span><select name="state" class="select_content" id="state"></select>
 					</div>
 				</li>
-				<li style="margin-top: 40px; margin-left: 45px;">
+				<li style="margin-top: 60px; margin-left: 20px;">
 					<div id="buttonbox" class="marginauto clearfix buttonbody"
 						style="display: inline;"></div>
 				</li>

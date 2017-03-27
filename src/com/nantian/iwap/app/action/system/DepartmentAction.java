@@ -26,10 +26,15 @@ public class DepartmentAction extends CRUDAction {
 		String state = dtbHelper.getStringValue("state");
 		String _deptId = dtbHelper.getStringValue("_deptId");
 		String _deptlevel = PubAction.getDeptlevel(_deptId);
+		String _path = _deptId;
+		if("81".equals(_deptId)){
+			logger.info("国家投资发展公司---81--SDIC");
+			_path = "SDIC";
+		}
 		
 		List params = new ArrayList();
 		String sqlStr = "	SELECT   d.org_id, d.org_pid,  d.org_nm ,d.org_status from sys_org d  left join  sys_org m on d.org_pid=m.org_id"+
-				" where  1=1  and d.org_lvl >= " + _deptlevel + " and d.org_path like '%" + _deptId + "%' ";
+				" where  1=1  and d.org_lvl >= " + _deptlevel + " and d.org_path like '%" + _path + "%' ";
 		
 		if (!"".equals(departmentid)) {
 			sqlStr += " and d.org_id like  ? ";
@@ -85,6 +90,7 @@ public class DepartmentAction extends CRUDAction {
 		String state = dtbHelper.getStringValue("state");
 		String _deptlevel = PubAction.getDeptlevel(parentid);
 		String orgpath ="";
+		
 		//String sqlStr = "insert into sys_org(org_id,org_nm,org_ful,nm,org_lvl,org_pid,org_path,org_status) values (?,?,?,?,?,?)";
 		try {
 			if ("4".equals(_deptlevel)) {
@@ -242,12 +248,18 @@ public class DepartmentAction extends CRUDAction {
 	
 	protected int list(DTBHelper dtbHelper) throws BizActionException {
 		String name = dtbHelper.getStringValue("name");
-		String org_id = "%"+dtbHelper.getStringValue("org_id")+"%";
+		String org_id = dtbHelper.getStringValue("org_id");
 		String org_id1 = dtbHelper.getStringValue("org_id1");
+		String _path = org_id;
+		if("%81%".equals(org_id)){
+			logger.info("国家投资发展公司---81--SDIC");
+			_path = "%SDIC%";
+		}
+		
 		String sqlStr = "SELECT  d.ORG_ID, d.ORG_PID, d.ORG_NM " +
 						" from sys_org d  " +
 						" left join  sys_org m on d.org_pid=m.org_id " +
-						" where d.org_nm like '"+name+"'  and d.org_path  LIKE '"+org_id+"'" +
+						" where d.org_nm like '"+name+"'  and d.org_path  LIKE '"+_path+"'" +
 						" and d.org_pid='"+org_id1+"' or d.org_id='"+org_id1+ 
 						"' order by org_id asc" ;
 		try {

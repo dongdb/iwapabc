@@ -128,7 +128,7 @@
 	</div>
 	<!-- 对话框END -->
 	<div class="center">
-		<div class="w500mauto">
+		<div class="w300mauto" style="margin-left:25%;margin-top:40px;">
 		  <form method="post" onsubmit="return false" id="area">
 			<ul>
 				<li>
@@ -210,7 +210,7 @@
 					</div>
 				</li>
 				<li>
-					<div style="padding-left: 150px">
+					<div style="padding-left: 30px;margin-top:20px;">
 						<div class="buttonbox">
 							<button data-iwap-xtype="ButtonField" id="save"
 								class="btn false mr30" onclick="doSave()">保存</button>

@@ -330,16 +330,15 @@
 	</ul>
 </div>
 	<div class="center">
-		<div class="w500mauto">
+		<div class="w300mauto" style="margin-left:25%;margin-top:40px;">
 			<ul>
 				<li id="deptid" name="deptid"></li>
 				<li id="deptname" name="deptname"></li>
 				<li id="deptfullname" name="deptfullname"></li>
 				<li class="clearfix">
 					<div class="selectbox inputbox">
-						<label class="select_label">机构等级&nbsp;:&nbsp;</label> <select
-							name="deptlevel" class="select_content" id="deptlevel"
-							style="margin-left: 3px;"></select>
+						<span>机构等级：</span><select name="deptlevel" class="select_content" id="deptlevel"
+							></select>
 					</div>
 				</li>
 				<li>
@@ -353,10 +352,9 @@
 						<ul id="tree" class="ztree"></ul>
 					</div>
 				</li>
-				<li 　class="selectbox">
+				<li class="selectbox">
 					<div class="selectbox">
-						<label class="select_label">机构状态&nbsp;:&nbsp;</label> <select
-							name="state" class="select_content" id="state"></select>
+						<span>机构状态：</span><select	name="state" class="select_content" id="state"></select>
 					</div>
 				</li>
 				<li id="parent_li">

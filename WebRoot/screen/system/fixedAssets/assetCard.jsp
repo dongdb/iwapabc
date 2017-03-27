@@ -136,18 +136,18 @@
 				</select>
 				<input name="FORIGINVALUE" type="text"
 					data-iwap-xtype="TextField" id="FORIGINVALUE" class="input_text_1"
-					value="" style="width: 55px;">
+					value="" style="width: 52px;">
 			</div>
 		</div>
 		<div class="col-md-3 fl">
 			<div class="inputbox">
-				<span>资产净残值:</span><select data-iwap-xtype="ListField" name="OPERATOR"
+				<span>净残值：</span><select data-iwap-xtype="ListField" name="OPERATOR"
 					class="select_content" id="OPERATOR2" style="width: 70px;">
 					<option value="">-全部-</option>
 				</select>
 				<input name="FREMAINVALUE" type="text"
 					data-iwap-xtype="TextField" id="FREMAINVALUE" class="input_text_1"
-					value="" style="width: 55px;">
+					value="" style="width: 52px;">
 			</div>
 		</div>
 		<div class="col-md-3 fl">
@@ -158,13 +158,13 @@
 			</div>
 		</div>
 		<div class="inputbox " >
-			<input name="pid1" type="date"
+			<input name="pid1" style=" width:110px;" type="date"
 				data-iwap-xtype="TextField" id="pid1" class="input_text_2"
 				value="" disabled="disabled">
 		</div>
 		<div class="inputbox" >
 			-
-			<input name="pid2" type="date" data-date-format="mm-dd-yyyy"
+			<input style=" width:110px;" name="pid2" type="date" data-date-format="mm-dd-yyyy"
 				data-iwap-xtype="TextField" id="pid2" class="input_text_2"
 				value="" disabled="disabled" >
 		</div>

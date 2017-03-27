@@ -205,19 +205,17 @@
 </head>
 <body class="iwapui center_body">
 	<input type="hidden" id="_deptId" value="${userInfo.ORG_ID}" />
-	<div class="">
+	<div class="col-md-12">
 		<ul class="linelist">
 			<li class="clearfix">
 				<table>
 					<tr>
 						<td>
-							<div class="inputbox pr" id="departmentid"></div>
+							<div class="inputbox" id="departmentid"></div>
 						</td>
 						<td>
-							<div class="inputbox pr" id="deptName"></div>
+							<div class="inputbox" id="deptName"></div>
 						</td>
-					</tr>
-					<tr>
 						<td>
 							<div class="selectbox">
 								<label class="select_label">级别:</label> <select name="deptLevel"
@@ -239,16 +237,20 @@
 			</li>
 		</ul>
 	</div>
+	<div class="col-md-offset-4">
 	<div class="search_btn">
 		<a href="javaScript:void(0)" class="btn btn-primary mr30" id="btn_query">查询</a>
 		<a href="javaScript:void(0)" class="btn btn-primary mr30" id="btn_clear">清空</a>
 		<a href="${ctx}/iwap.ctrl?txcode=addDepartment" class="btn btn-primary" id="btn_add">新增</a>
 		<a href="javaScript:void(0)" id="upfile" style="display: none;"></a>
 	</div>
+	</div>
 	<hr>
+	<div class="col-md-12">
 	<div class="table_box">
 		<br>
 		<div id="tree"></div>
+	</div>
 	</div>
 </body>
 </html>

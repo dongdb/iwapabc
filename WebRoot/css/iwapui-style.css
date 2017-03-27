@@ -46,10 +46,10 @@
  .iwapui .inputbox1{vertical-align:top;}
  .iwapui .inputbox label{float:left;}
  .iwapui .inputbox1 label{float:left;}
- .iwapui .inputbox>span{  vertical-align: top; height: 32px; line-height: 32px; width: 65px; display: inline-block; text-align: right; overflow: hidden;}
+ .iwapui .inputbox>span{  vertical-align: top; height: 32px; line-height: 32px; width: 105px; display: inline-block; text-align: right; overflow: hidden;}
  .iwapui .inputbox1>span{  vertical-align: top; height: 32px; line-height: 32px; width: 75px; display: inline-block; text-align: right; overflow: hidden;}
  .iwapui .inputbox .input_text_valid{width: 180px; height: 28px;padding: 1px 5px; background-color: #fff; border: 1px solid #FF0000; }
- .iwapui .inputbox .input_text{width: 200px; height: 28px;padding: 1px 5px; background-color: #fff;}
+ .iwapui .inputbox .input_text{width: 150px; height: 28px;padding: 1px 5px; background-color: #fff;}
  .iwapui .inputbox .input_text_1{margin-left: 5px; width: 130px; height: 28px;padding: 1px 5px; background-color: #fff;}
  .iwapui .inputbox1 .input_text_1{margin-left: 5px; width: 130px; height: 28px;padding: 1px 5px; background-color: #fff;}
  .iwapui .inputbox .input_text_1:disabled{margin-left: 5px; width: 130px; height: 28px; padding: 1px 5px; background: #f6f6f6;}
@@ -78,9 +78,9 @@
  .iwapui .inputbox .tooltip_arrow_l { height: 30px; line-height: 30px; width: auto; right: 100%; margin-right: 6px; top: 0px; background: #33495F; color: #fff; padding: 0 12px; border-radius: 3px; white-space: nowrap; position: absolute; z-index: 99;}*/
 /*下拉框样式-原生*/
  .iwapui .selectbox{position: relative; display: inline-block; _zoom:1;_display: inline;width:100%}
- .iwapui .selectbox>span{  vertical-align: top; height: 32px; line-height: 32px;}
- .iwapui .select_content{margin-left: 5px; width: 130px; height: 28px;padding: 1px 5px; background-color: #fff;}
- .iwapui .select_content:disabled{margin-left: 5px; width: 130px; height: 28px;padding: 1px 5px; background-color: #fff;background: #f6f6f6;}
+ .iwapui .selectbox>span{vertical-align: top; height: 32px; line-height: 32px; width: 105px; display: inline-block; text-align: right; overflow: hidden;}
+ .iwapui .select_content{width: 150px; height: 28px;padding: 1px 5px; background-color: #fff;}
+ .iwapui .select_content:disabled{width: 150px; height: 28px;padding: 1px 5px; background-color: #fff;background: #f6f6f6;}
 
  .iwapui .selectbox label{display: inline-block; height: 30px; line-height: 30px; margin-right: 5px; vertical-align: middle; width: 84px; overflow: hidden; text-align: right; font-weight: normal;}
  .select_content{ border: 1px #ccc solid; width: 180px; height: 26px; line-height: 26px;}
