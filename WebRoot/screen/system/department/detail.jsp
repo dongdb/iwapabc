@@ -180,7 +180,7 @@
 						<span>机构状态：</span><select name="state" class="select_content" id="state"></select>
 					</div>
 				</li>
-				<li style="margin-top: 60px; margin-left: 20px;">
+				<li style="margin-top: 60px; margin-left: 30px;">
 					<div id="buttonbox" class="marginauto clearfix buttonbody"
 						style="display: inline;"></div>
 				</li>

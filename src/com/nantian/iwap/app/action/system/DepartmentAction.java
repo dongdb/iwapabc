@@ -259,9 +259,7 @@ public class DepartmentAction extends CRUDAction {
 		String sqlStr = "SELECT  d.ORG_ID, d.ORG_PID, d.ORG_NM " +
 						" from sys_org d  " +
 						" left join  sys_org m on d.org_pid=m.org_id " +
-						" where d.org_nm like '"+name+"'  and d.org_path  LIKE '"+_path+"'" +
-						" and d.org_pid='"+org_id1+"' or d.org_id='"+org_id1+ 
-						"' order by org_id asc" ;
+						" where d.org_nm like '"+name+"'  and d.org_path  LIKE '"+_path+"'";
 		try {
 			System.out.println(sqlStr);
 			DBAccessBean dbBean = DBAccessPool.getDbBean();

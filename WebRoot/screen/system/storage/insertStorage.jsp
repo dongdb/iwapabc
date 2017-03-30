@@ -1587,7 +1587,7 @@
 		document.getElementById("saveAll").setAttribute("class", "disa");
 		document.getElementById("doStorage").setAttribute("class", "disa");
 		document.getElementById("doCommit").setAttribute("class", "disa");
-	};
+	}
 
 	//清空
 	function doReset() {
@@ -1595,11 +1595,11 @@
 		$('#zcsl').val('1');
 		$('#currency').val('人民币');
 		operForm.disabledById("currency");
-	};
+	}
 
 	//对话框
 	function dialogModal(id) {
 		$('#' + id).dialog();
-	};
+	}
 </script>
 </html>

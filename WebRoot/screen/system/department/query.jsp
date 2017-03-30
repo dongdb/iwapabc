@@ -218,7 +218,7 @@
 						</td>
 						<td>
 							<div class="selectbox">
-								<label class="select_label">级别:</label> <select name="deptLevel"
+								<label class="select_label">级别：</label> <select name="deptLevel"
 									class="select_content" id="deptLevel">
 									<option value="">--全部--</option>
 								</select>
@@ -226,7 +226,7 @@
 						</td>
 						<td>
 							<div class="selectbox">
-								<label class="select_label">状态:</label> <select name="state"
+								<label class="select_label">状态：</label> <select name="state"
 									class="select_content" id="state">
 									<option value="">--全部--</option>
 								</select>
